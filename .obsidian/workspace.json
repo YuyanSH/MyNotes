@@ -11,10 +11,14 @@
             "id": "fda755d7b3fa1d9a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Learning Notes/Windows/CMD/Windows命令.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows命令"
             }
           }
         ]
@@ -156,7 +160,32 @@
   },
   "active": "fda755d7b3fa1d9a",
   "lastOpenFiles": [
+    "Daily Work/未命名.canvas",
+    "Learning Notes/Windows/CMD/Windows命令.md",
+    "windows-server-administration-windows-commands.pdf",
+    "Learning Notes/VSCode/VSCode快捷命令.md",
+    "Learning Notes/VSCode",
+    "Learning Notes/Git/算法学习网站.md",
+    "Learning Notes/Windows/CMD",
+    "Learning Notes/Windows",
+    "Learning Notes/Git/网站中的学习笔记.md",
+    "Learning Notes/Git/Gitcmd(official).md",
+    "Learning Notes/Python/虚拟环境/venv.md",
+    "Learning Notes/Git",
+    "Learning Notes/Python/基础语法/extend与append.md",
+    "Learning Notes/Python/报错/pycharm报错.md",
+    "Learning Notes/Python/虚拟环境",
+    "Learning Notes/Python/深度学习/动物行为模型训练.md",
+    "Learning Notes/Python/基础语法",
+    "Learning Notes/Python/python库/numpy/numpy.md",
+    "Learning Notes/Python/100days/python_notes_24.10.016_循环结构.md",
+    "Learning Notes/Python/python库/numpy",
+    "Learning Notes/Python/100days/python_notes_24.09.23_初识python.md",
+    "Learning Notes/Python/100days/python_notes_24.09.27_分支结构.md",
+    "Learning Notes/Python/100days/python_notes_24.09.23_语言元素.md",
     "TestDemo1.md",
+    "Learning Notes/Python/报错",
+    "Learning Notes/Python/Python编程(从入门到实践)",
     "欢迎.md"
   ]
 }
