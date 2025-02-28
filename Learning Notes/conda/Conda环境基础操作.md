@@ -1,3 +1,4 @@
+## 一. 基础应用
 ### 一. 管理conda
 1. 验证conda是否已安装
 ```bash
@@ -284,3 +285,238 @@ conda env remove --name myenv
 ```
 
 ### 三. 管理频道
+#### 1. 安装包时，指定频道
+1. 命令行使用channel
+```bash
+conda install scipy --channel conda-forge
+```
+2. 使用多次传递函数指定多个通道
+```bash
+conda install scipy --channel conda-forge --channel bioconda
+```
+第一个优先级高于第二个优先级
+
+
+### 四. 管理包
+#### 1. 搜索包
+1. 检查特定包是否支持安装
+```bash
+conda search scipy
+```
+2. 查看是否可以从Anaconda.org 安装特定软件包
+```bash
+conda search --override-channels --channel defaults scipy
+```
+3. 查看特定频道中是否存在特定包并且可以安装
+```bash
+conda search --override-channel --channel http://conda.anaconda.org/mutirri iminuit
+```
+#### 2. 安装包
+1. 将特定包安装到现有环境中
+```bash
+conda install --name myenv scipy
+```
+2. 若未指定环境名称，则安装到当前环境中
+```bash
+conda install scipy
+```
+3. 安装特定版本的包
+```bash
+conda install scipy=0.15.0
+```
+4. 一次安装多个包
+```bash
+conda install scipy curl
+```
+>[!note] 最好一次安装所有包，以便所有依赖项都可以同时安装
+5. 一次安装多个包并指定包的版本
+```bash
+conda install scipy=0.15.0 curl=7.26.0
+```
+#### 3. 从Anaconda.org中安装包
+使用`conda install`无法安装的包，可以从anaconda.org中获取
+1. 在浏览器中，搜索 [http://anaconda.org](http://anaconda.org/)
+2. 搜索要找的包比如`bottleneck`
+3. 查看包的详情页，详情页会显示频道的名字，例如这个例子中的频道是"pandas"
+4. 安装
+```bash
+conda install -c pandas bottleneck
+```
+5. 检查
+```bash
+conda list
+```
+#### 4. 安装非conda包
+如果无法使用conda安装，请尝试使用 [conda-forge](https://conda-forge.org/search.html)查找并安装它。如果仍然无法安装，则使用pip安装。
+要安装非conda包
+1. 激活想要放置程序的环境
+```bash
+conda activate myenv
+```
+2. 使用pip安装see之类的程序
+```bash
+pip install see
+```
+3. 检查
+```bash
+conda list
+```
+#### 5. 查看已安装包的列表
+1. 在一个激活的环境中时
+```bash
+conda list
+```
+2. 未激活的环境
+```bash
+conda list -n myenv
+```
+#### 6. 列出包依赖项
+要查找环境中哪些包依赖于特定包，没有一个特定的conda命令，需要一系列的步骤
+1. 列出特定包运行所需的依赖项
+```bash
+conda search package_name --info
+```
+2. 找到安装的包缓存目录
+```bash
+conda info
+```
+3. 查找软件包依赖项。默认情况下，Anaconda/Miniconda 将软件包存储在 ~/anaconda/pkgs/（或 macOS Catalina 上的 ~/opt/pkgs/）中。每个软件包都有一个 index.json 文件，其中列出了软件包的依赖项。此文件位于 ~anaconda/pkgs/package_name/info/index.json。
+4. 现在使用grep搜索所有index.json文件
+```bash
+grep package_name ~/anaconda/pkgs/*/info/index.json
+```
+结果将是包含 <package_name> 的任何内容的完整包路径和版本。
+例如
+```bash
+grep numpy ~/anaconda/pkgs/*/info/index.json
+```
+上述命令的输出：
+```bash
+/Users/testuser/anaconda3/pkgs/anaconda-4.3.0-np111py36_0/info/index.json: numpy 1.11.3 py36_0
+/Users/testuser/anaconda3/pkgs/anaconda-4.3.0-np111py36_0/info/index.json: numpydoc 0.6.0 py36_0
+/Users/testuser/anaconda3/pkgs/anaconda-4.3.0-np111py36_0/info/index.json: numpy 1.11.3 py36_0
+```
+
+请注意，这也返回了“numpydoc”，因为它包含字符串“numpy”。要获得更具体的结果集，您可以添加 < 和 >
+#### 7. 更新包
+1. 更新特定包
+```bash
+conda up date biopython
+```
+2. 更新python
+```bash
+conda update python
+```
+3. 更新conda本身
+```bash
+conda update conda
+```
+4. 更新anaconda元包
+```bash
+conda update conda 
+conda update anaconda
+```
+#### 8. 固定软件包
+在`conda-meta`目录中，添加一个名为`pinned`的文件，其中包含不想更新的软件列表。
+示例：下面的文件强制munpy停留在1.7系列。强制Scipy停留在0.14.2版本：
+```bash
+numpy 1.7.*
+scipy ==0.14.2
+```
+使用`--no-pin`标志可覆盖软件包的更新限制，在终端中运行
+```bash
+conda update numpy --no-pin
+```
+#### 9. 自动将默认包添加到新环
+1. 打开终端窗口并运行
+```bash
+conda config --add create_default_packages PACKAGENAME1 PACKAGENAME2
+```
+2. 创建新环境并且默认包将安装在所有环境中
+3. 在命令行使用
+```bash
+--no-default-packages
+```
+#### 10. 删除包
+1. 在myenv等环境中删除Scipy包
+```bash
+conda remove -n myenv scipy
+```
+2. 删除当前环境中的Scipy包
+```bash
+conda remove scipy
+```
+3. 一次删除多个包
+```bash
+conda remove scipy curl
+```
+4. 检查
+```bash
+conda list
+```
+
+
+### 五. 管理python
+#### 1. 列出可安装的python版本
+1. 列出名称中包含文本的所有包
+```bash
+conda search python
+```
+2. 列出全名完全正确的软件包
+```bash
+conda search --full-name python
+```
+#### 2. 安装不同版本的python
+1. 创建新环境
+```bash
+conda create -n py39 python=3.9
+```
+2. 激活新环境
+3. 验证
+```bash
+python --version
+```
+### 六. 创建项目
+- 使用`environment.yml`文件创建一个新的python项目
+#### 1. 创建项目文件
+1. 创建目录
+```bash
+mkdir my-project
+```
+2. 在VSCODE中创建`environment.yml`文件并编辑
+```
+name: my-project
+channels:
+  - defaults
+dependencied:
+  - python
+```
+#### 2. 创建环境
+```bash
+conda env create --file environment.yml
+conda activate my-project
+```
+#### 3. 更新环境
+1. 更新`environment.yml`文件
+```
+name: my-project
+channels:
+  - defaults
+dependencies:
+  - python
+  - pandas  # <-- This is our new dependency
+```
+2. 更新
+```bash
+conda env update --file environment.yml
+```
+### 七. 查看命令行帮助
+```bash
+conda --help
+conda -h
+conda create -h
+```
+
+## 二. 配置
+### 一. 使用.condarc conda配置文件
+#### 1. 概述

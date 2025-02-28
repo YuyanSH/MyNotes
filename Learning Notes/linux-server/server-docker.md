@@ -42,7 +42,7 @@ cat /d/Files/SelfLearningProject/SSH-keys/SSH-key-github-1/.ssh/id_rsa.pub
 
 - 连接SIOM-server服务器
 ```bash
-ssh siom-SERVER
+ssh SIOM-server
 ```
 
 - 列出所有镜像

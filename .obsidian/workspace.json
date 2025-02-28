@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "网站中的学习笔记"
             }
+          },
+          {
+            "id": "7692e84e3219bdb5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning Notes/Abaqus/二、网格划分及单元选择.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "二、网格划分及单元选择"
+            }
           }
         ]
       }
@@ -40,7 +54,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -77,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "87f881d96935732d",
@@ -93,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Lessons/生物医学信号处理/SC24038034-孙浩-第一次作业.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "SC24038034-孙浩-第一次作业 的反向链接列表"
             }
           },
           {
@@ -160,42 +177,52 @@
   },
   "active": "fda755d7b3fa1d9a",
   "lastOpenFiles": [
-    "Current Account/流水.md",
-    "Daily Work/每日任务与总结.md",
-    "Current Account",
-    "Learning Notes/conda/Conda环境基础操作.md",
-    "Infos/SIOM-BCI/Server.md",
-    "Lessons/英语口语/部分模块笔记2.md",
-    "Lessons/英语口语/部分模块笔记.md",
-    "Learning Notes/Python/报错/pycharm报错.md",
-    "Linux命令行与shell脚本编程大全  第3版  ,布鲁姆 ,P606.pdf",
-    "Learning Notes/Python/虚拟环境/venv.md",
-    "Learning Notes/conda",
-    "Learning Notes/Python/Python编程(从入门到实践)/Book.md",
-    "Learning Notes/linux-server/Linux命令行与shell脚本编程大全  第3版  ,布鲁姆 ,P606.md",
-    "Learning Notes/linux-server/linux基础.md",
     "Learning Notes/linux-server/server-docker.md",
-    "Lessons/英语口语",
-    "Lessons",
-    "Papers",
-    "Learning Notes/Deep Learning/《动手学深度学习（PyTorch版）》配套资源获取链接.md",
-    "windows-server-administration-windows-commands.pdf",
-    "Python编程：从入门到实践（第3版）翻译版.pdf",
-    "Infos/SIOM-BCI",
-    "Infos",
-    "Learning Notes/VSCode/VSCode快捷命令.md",
-    "Learning Notes/Python/python库/numpy/numpy.md",
-    "Learning Notes/Python/深度学习/动物行为模型训练.md",
-    "Learning Notes/Python/基础语法/extend与append.md",
-    "Learning Notes/Python/100days/python_notes_24.10.016_循环结构.md",
-    "Learning Notes/Python/100days/python_notes_24.09.27_分支结构.md",
-    "Learning Notes/Python/100days/python_notes_24.09.23_语言元素.md",
-    "Learning Notes/Python/100days/python_notes_24.09.23_初识python.md",
-    "Learning Notes/Google Colab/Colab使用.md",
-    "Learning Notes/Git/算法学习网站.md",
-    "Learning Notes/Git/Gitcmd(official).md",
     "Learning Notes/Git/网站中的学习笔记.md",
-    "TestDemo1.md",
+    "Learning Notes/VSCode/VSCode快捷命令.md",
+    "Learning Notes/Git/Gitcmd(official).md",
+    "Learning Notes/linux-server/Linux命令行与shell脚本编程大全  第3版  ,布鲁姆 ,P606.md",
+    "Learning Notes/Git/算法学习网站.md",
+    "Learning Notes/linux-server/linux基础.md",
+    "Learning Notes/VSCode/VSCode连接服务器.md",
+    "Infos/SIOM-BCI/Server.md",
+    "Infos/SIOM-BCI/ToDesk连接.md",
+    "Learning Notes/conda/Conda环境基础操作.md",
+    "Daily Work/研一下每日任务.md",
+    "Learning Notes/Deep Learning/动手学深度学习（Pytorch）/《深度学习》.md",
+    "Deep-Learning花书-《深度学习》-中文版.pdf",
+    "Learning Notes/Deep Learning/动手学深度学习（Pytorch）/《动手学深度学习PyTorch》.md",
+    "《动手学深度学习》Pytorch版.pdf",
+    "Learning Notes/Deep Learning/动手学深度学习（Pytorch）/《动手学深度学习（PyTorch版）》配套资源获取链接.md",
+    "Learning Notes/Abaqus/二、网格划分及单元选择.md",
+    "Learning Notes/Abaqus/步骤.md",
+    "Learning Notes/Abaqus/Abaqus有限元分析从入门到精通 2022版.md",
+    "Learning Notes/Abaqus/专业单词.md",
+    "Learning Notes/Abaqus/注意事项.md",
+    "Daily Work/研一上学期每日任务与总结.md",
+    "498fde00a084e87a039bab0f55c53a93_.png",
+    "Missions/力学仿真2025.2.17/力学仿真任务.md",
+    "Abaqus有限元分析从入门到精通 2022版.pdf",
+    "Daily Work/2025.1.22-2025.2.20每日任务.md",
+    "Current Account/流水.md",
+    "Learning Notes/Abaqus",
+    "73eca8b14240628685a33ae2c895d76.png",
+    "397a332ad6b6f5144fc0a1fd907090c4_.png",
+    "a391ffe9de67eef521923918d7547b49_.png",
+    "dff54df4005eea921bcdc908bef8ccef_.png",
+    "f5fd9f60f925afbf2a022118b5ea290a_.png",
+    "3a6c32a38ee6c6a3de8927fc689c404.png",
+    "Missions/力学仿真2025.2.17",
+    "Missions",
+    "Learning Notes/Python/Python编程(从入门到实践)/Book.md",
+    "Lessons/生物医学信号处理/课程报告.md",
+    "Pasted image 20241228020015.png",
+    "Pasted image 20241228002214.png",
+    "Pasted image 20241228001706.png",
+    "Lessons/傅里叶光学",
+    "Lessons/光学设计",
+    "Lessons/非线性光学/非线性光学复习",
+    "windows-server-administration-windows-commands.pdf",
     "Daily Work/未命名.canvas"
   ]
 }
